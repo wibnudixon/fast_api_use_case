@@ -1,5 +1,6 @@
+# Importing packages
 from app.services.tasks import TaskService
-
+# Creating a single instance of the TaskService to be shared across the application
 task_service = TaskService()
 
 
