@@ -2,7 +2,7 @@ import logging
 
 from app.core.config import settings
 
-
+# configures loggin along with overriding any preexisting log config
 def configure_logging() -> None:
     """Configure application logging once during application startup."""
     logging.basicConfig(
