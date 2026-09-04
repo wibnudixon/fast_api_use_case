@@ -11,30 +11,45 @@ This repo is used for learning fastapi, this would later pivot into a repo with 
 ---
 #### Project structure
 
-Current relevant structure:
-
 ```text
 my-fastapi-app/
-├── api/
-│   └── tasks.py
-├── schemas/
-│   └── task.py
-├── tests/
-│   ├── test_health.py
-│   ├── test_task_schemas.py
-│   └── test_tasks.py
-├── main.py
+├── .env.example
+├── .python-version
 ├── pyproject.toml
-└── uv.lock
+├── uv.lock
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── dependencies.py
+│   │   └── tasks.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── errors.py
+│   │   └── logging.py
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── task.py
+│   └── services/
+│       ├── __init__.py
+│       └── tasks.py
+└── tests/
+    ├── __init__.py
+    ├── test_health.py
+    ├── test_task_schemas.py
+    ├── test_task_service.py
+    └── test_tasks.py
 ```
 
-#### Prequisites - macos and ubuntu 
-- Python (version number ?)
+#### Prequisites 
+- Python 3.14.4
 - uv
 
 #### Steps to initiate the application
 
-- `git clone <repository-url>`
+- `git clone <get the link from the github repo>`
 - `cd fast_api_use_case/my-fastapi-app`
 - `uv sync`
 
