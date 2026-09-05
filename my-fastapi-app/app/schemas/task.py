@@ -3,7 +3,7 @@ from enum import StrEnum
 from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field
-
+# Allowed lifecysle states for a task 
 class TaskStatus(StrEnum):
     """Allowed lifecycle states for a task."""
 

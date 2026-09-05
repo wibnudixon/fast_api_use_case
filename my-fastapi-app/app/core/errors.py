@@ -1,6 +1,6 @@
+#Base class for expected application-level errors
 class AppError(Exception):
-    """Base class for expected application-level errors."""
-
+    
     status_code = 400
     code = "application_error"
 
@@ -8,9 +8,8 @@ class AppError(Exception):
         self.message = message
         super().__init__(message)
 
-
+#Raised when a requested resource does not exist
 class ResourceNotFoundError(AppError):
-    """Raised when a requested resource does not exist."""
-
+    
     status_code = 404
     code = "resource_not_found"
