@@ -1,7 +1,6 @@
 from uuid import UUID
 
 from fastapi import APIRouter, Depends, Response, status
-
 from app.api.dependencies import get_task_service
 from app.schemas.task import TaskCreate, TaskResponse, TaskUpdate
 from app.services.tasks import TaskService

@@ -4,10 +4,6 @@ from app.core.errors import ResourceNotFoundError
 from app.schemas.task import TaskCreate, TaskResponse, TaskUpdate
 
 
-class TaskNotFoundError(Exception):
-    """Raised when a requested task does not exist."""
-
-
 class TaskService:
     """Manage tasks using temporary in-memory storage."""
 
@@ -41,7 +37,7 @@ class TaskService:
         task = self._tasks.get(task_id)
 
         if task is None:
-            raise TaskNotFoundError
+            raise ResourceNotFoundError("TaskNotFoundError")
 
         return task
 

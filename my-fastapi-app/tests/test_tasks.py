@@ -88,7 +88,12 @@ def test_get_task_returns_not_found_for_unknown_id() -> None:
     response = client.get("/api/v1/tasks/00000000-0000-0000-0000-000000000000")
 
     assert response.status_code == 404
-    assert response.json() == {"detail": "Task not found"}
+    assert response.json() == {
+        "error": {
+            "code": "resource_not_found",
+            "message": "Task not found",
+            
+        }}
 
 
 def test_update_task_changes_only_sent_fields() -> None:
